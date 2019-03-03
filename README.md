@@ -31,3 +31,17 @@ with LIDAR and/or cameras, map the environment including
 cars, obstacles, and pedestrians [5]. Automotive long-range
 radars commonly in use today are based on Frequency Modulated Continuous Wave (FMCW) [2], [16], and operate in the
 76-77 GHz band [3] with a total bandwidth of 1 GHz. (from [radarMAC paper](http://sci-hub.tw/10.1109/SAHCN.2016.7733011))
+- Radars are moving from 24 GHz to 77 GHz in automotive radars. The range resolution of a 77GHz system can be 4cm versus 75cm for 24GHz radar, allowing better detection of multiple objects that are close together. (...) as sensors move from 24GHz to 77GHz, velocity measurements can improve by 3x. (...) the total area needed for a 77GHz antenna is one-ninth the size of a similar 24GHz antenna.(from [Texas Instruments](https://e2e.ti.com/blogs_/b/behind_the_wheel/archive/2017/10/25/why-are-automotive-radar-systems-moving-from-24ghz-to-77ghz))
+	- Historically short-range radars (SRR) used 24 GHz, and long range radars (LRR) are using 77 GHz.
+- Excellent video from NXP on the [The latest developments in radar technology for automotive](https://youtu.be/MiVCee1UfJs?t=262).
+- Nice way to visualize L1-L5 from NXP. ADAS for L1-L2, and autonomous driving for L3-L5.
+![](assets/levels.png)
+
+- Comparison of different sensors. OEM and tier-1 are asking for more resolution from radars for L3, L4 autonomous driving.
+![](assets/comparison_sensors.png)
+
+- [Automotive supply chain explained](https://medium.com/self-driving-cars/the-automotive-supply-chain-explained-d4e74250106f). Manufactures are OEMs. Direct part suppliers are tier-1.
+- MIMO has virtual channels. 3Tx/4Rx goes to 12Tx/16Rx.
+
+## Radar providers
+- [SmartMicro](https://youtu.be/MiVCee1UfJs?t=262): German company with footprint in China. 
