@@ -1,5 +1,21 @@
 # Notes on autonomous driving
 
+## Concepts
+#### Lidar
+- A lidar has its own source of light, so it works at night.
+- Lidar requires less power and generates less heat than 2D camera system.
+- 360 degree views (from spinning a linear laser source), no blind spot.
+- Lidar vs high resolution radar ([youtube video](https://youtu.be/NZKvf1cXe8s?t=181)). NXP also has a nice [comparison](https://semiengineering.com/wp-content/uploads/2017/10/fig4-2.png) according to [a 2017 report](https://semiengineering.com/here-comes-high-res-car-radar/).
+- The current state-of-the-art Lidar from Velodyne is the Alpha Puck, with 300 m visible distance.
+- Spinning radars have advantages over solid state lidars
+	- 360 degree view. Solid state lidars have at most 120 degree view, and thus at least four are needed to cover the 360 degrees.
+	- [Review](https://arstechnica.com/cars/2018/05/why-bulky-spinning-lidar-sensors-might-be-around-for-another-decade/) predicting that spinning lidars will be around for another decade.
+- Velodyne laser specs
+	- Wavelength: Velodyne lasers uses [905 nm](https://velodynelidar.com/newsroom/guide-to-lidar-wavelengths/), which falls in near infrared (NIR) range. (They also have 1550 nm version, which has more water absorption, operating at higher power and less safe to human eyes.)
+	- Power: 2 mW. 
+	- Safety: Belongs to Class I (safest) category according to IEC categorization.
+	- Rotating speed: Velodyne lidars rotates at 10 Hz.
+
 ## FAQ
 ### Q: Will multiple lidars interfere?
 tl;dr: Yes but very unlikely and easy to filter out.
