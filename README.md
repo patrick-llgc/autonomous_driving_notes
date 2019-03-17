@@ -63,6 +63,25 @@ radars commonly in use today are based on Frequency Modulated Continuous Wave (F
 - [SmartMicro](https://youtu.be/MiVCee1UfJs?t=262): German company with footprint in China. 
 - A number of companies include Arbe, Autoliv, Echodyne, Metawave, RADSee, Steradian and others are working on high resolution radars. In addition, NXP is pursuing it. Imec, an R&D organization, also is working on it.
 
+## Sensor fusion
+### Why do we need sensor fusion?
+- Each sensor provides different types of information about the tracked object position with differing accuracies especially in different weather conditions. 
+- Algorithms used in sensor fusion have to deal with temporal, noisy input and generate a probabilistically sound estimate of kinematic state
+
+### Kalman filter, Extended Kalman filter
+- [Review on Medium](https://medium.com/@wilburdes/sensor-fusion-algorithms-for-autonomous-driving-part-1-the-kalman-filter-and-extended-kalman-a4eab8a833dd)
+- **Kalman filter** is one of the most powerful technique to smooth noisy input data and estimate state. The Kalman filter takes in a stream of information and uses the state prediction and measurement to update its belief about the state of the tracked object. 
+- Predicted state (with uncertainty) + Measurement (with noise) --> updated state and uncertainty.
+- Lidar data usually contains position information (x, y), but radar data usually contains (range rho, bearing theta and range rate rho').
+- **Extended Kalman filter **is used to process radar data or other data that does not fit into cartesian coordinate. The mapping of different coordinate system is nonlinear and thus violate the linear system state of Kalman filter (that measurement and process models are Gaussian, as non-linear transform of Gaussian is not Gaussian). The extended Kalman filter approximates the nonlinear model by a first order Taylor expansion.
+
+### Unscented Kalman Filters and Particle filters
+- TODO
+
 ## New ideas
 - Reconstruct high resolution radar image from lidar
-- 
+- What is the sensor setup?
+- Voyage
+![Voyage](https://cdn-images-1.medium.com/max/2400/1*VZMUdPFniGA3X7urHi6f4w.png)
+- Tesla
+![Tesla](https://electrek.co/wp-content/uploads/sites/3/2016/10/tesla-second-gen-autopilot-sensors-suite.png)
