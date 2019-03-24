@@ -1,5 +1,10 @@
 # Notes on autonomous driving
 
+## Building blocks
+- [Radar and Lidar](radar_lidar.md)
+- [Localization](localization.md)
+- [Sensor fusion](sensor_fusion.md)
+
 ## Levels of autonomous driving
 - Nice way to visualize L1-L5 from NXP. ADAS for L1-L2, and autonomous driving for L3-L5.
 ![](assets/levels.png)
